@@ -1,0 +1,17 @@
+body {
+  background: linear-gradient(145deg, white 30%, rgb(0, 245, 245));
+  background-size: cover;
+  font-size: 1.15em;
+  text-align: justify;
+  font-family: "Quicksand", sans-serif;
+}
+
+#title {
+  color: rgb(255, 166, 0);
+}
+.subtitle {
+  color: rgb(255, 166, 0);
+}
+.link {
+  text-decoration: underline;
+}

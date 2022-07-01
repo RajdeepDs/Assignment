@@ -1,0 +1,88 @@
+.container-fluid {
+  background-color: #0d6efd;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  justify-content: space-between;
+}
+i {
+  font-size: 34px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.PageName {
+  display: flex;
+  align-items: center;
+}
+fieldset {
+  border-radius: 5px;
+  width: max-content;
+  border: 1px solid #d4d4d5;
+}
+
+legend {
+  font-size: 15px;
+  float: none;
+}
+.form-select {
+  width: 13rem;
+}
+@media screen and (max-width: 768px) {
+  .cont-body {
+    display: block;
+  }
+}
+.fstrow,
+.scndrow,
+.trdrow,
+.fthrow {
+  display: flex;
+  justify-content: flex-start;
+}
+.scndrow,
+.trdrow,
+.fthrow {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px;
+}
+.scndrow {
+  align-items: center;
+}
+.frthrow {
+  display: block;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px;
+}
+
+.form-group .border {
+  border-radius: 10px;
+}
+#customFile {
+  width: 18rem;
+}
+.fthrow {
+  align-items: center;
+}
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.col-divide {
+  display: block;
+  justify-content: space-between;
+  padding: 0px;
+}
+.bi-exclamation {
+  color: red;
+}
+.modal-body {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: rgb(65, 65, 65);
+}

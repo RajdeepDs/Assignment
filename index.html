@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create ChargeMix</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="PageName">
+          <i class="bi bi-filetype-xls"></i> Create ChargeMix
+        </div>
+        <i class="bi bi-x"></i>
+      </div>
+    </div>
+    <form action="" method="post">
+      <div class="container fstrow pt-5">
+        <fieldset class="form-group border p-1 me-3">
+          <legend class="w-auto px-2">Metal Grade</legend>
+          <div class="form-group">
+            <select class="form-select">
+              <option value="1">SG 500/14 (DI)</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="form-group border p-1 me-3">
+          <legend class="w-auto px-2">ChargeMix Name*</legend>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </fieldset>
+        <fieldset class="form-group border p-1">
+          <legend class="w-auto px-2">Furnace Size (in kg)*</legend>
+          <div class="form-group">
+            <input type="text" class="form-control" />
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="container cont-body">
+        <div class="container col-divide">
+          <div class="container scndrow pt-3">
+            <fieldset class="form-group border p-1 me-3">
+              <legend class="w-auto px-2">Heats per day*</legend>
+              <div class="form-group">
+                <input type="text" class="form-control" />
+              </div>
+            </fieldset>
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheck"
+              />
+              <label class="form-check-label">Electricity Model</label>
+            </div>
+          </div>
+          <div class="container trdrow pt-3">
+            <fieldset class="form-group border p-1 me-3">
+              <legend class="w-auto px-2">Tapping Temperature (&deg;C)*</legend>
+              <div class="form-group">
+                <input type="text" class="form-control" />
+              </div>
+            </fieldset>
+            <fieldset class="form-group border p-1 me-3">
+              <legend class="w-auto px-2">Tapping Time (minutes)*</legend>
+              <div class="form-group">
+                <input type="text" class="form-control" />
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="container frthrow pt-3">
+            <fieldset class="form-group border p-1">
+              <button type="button" class="btn btn-light" disabled>
+                Use Element Recovery Rates button
+              </button>
+              <button type="button" class="btn btn-primary">
+                Use Raw Material Composition
+              </button>
+            </fieldset>
+            <p class="pt-3">
+              In Inventory file, please provide compositon of raw materials in
+              %.
+            </p>
+            <fieldset class="form-group border p-1 me-3">
+              <legend class="w-auto px-2">Mg in FeSiMg (in %)*</legend>
+              <div class="form-group">
+                <input type="text" class="form-control" />
+              </div>
+            </fieldset>
+          </div>
+          <div class="container fthrow pt-3">
+            <p class="pe-3 pt-3">Upload File</p>
+            <input type="file" class="form-control" id="customFile" />
+          </div>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Element</th>
+              <th scope="col">Min</th>
+              <th scope="col">Max</th>
+              <th scope="col">Loss %</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>C</td>
+              <td>3</td>
+              <td>3.3</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Si</td>
+              <td>3.4</td>
+              <td>3.8</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Mn</td>
+              <td>0</td>
+              <td>0.5</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>S</td>
+              <td>0</td>
+              <td>0.012</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>P</td>
+              <td>0</td>
+              <td>0.05</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Mg</td>
+              <td>0.03</td>
+              <td>0.045</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container submit">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#errorModal"
+        >
+          Submit
+        </button>
+      </div>
+      <div
+        class="modal fade"
+        id="errorModal"
+        tabindex="-1"
+        aria-labelledby="errorModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <i class="bi bi-exclamation"></i>
+              {"excel_file":["at least one recovery rate is required in M.S
+              Scrap", "rate can not be zero at cell E5","rate can not be zero at
+              cell E8"]}
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="../js/bootstrap.bundle.js"></script>
+  </body>
+</html>

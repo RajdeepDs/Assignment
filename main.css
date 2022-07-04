@@ -87,6 +87,10 @@ legend {
 .bi-exclamation {
   color: red;
 }
+.modal-dialog {
+  position: absolute;
+  right: 1%;
+}
 .modal-body {
   display: flex;
   align-items: center;

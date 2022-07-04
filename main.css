@@ -11,7 +11,7 @@ i {
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .PageName {
   display: flex;
@@ -27,13 +27,18 @@ legend {
   font-size: 15px;
   float: none;
 }
-.form-select {
-  width: 13rem;
+@media (min-width: 768px) {
+  .form-select {
+    width: 13rem;
+  }
 }
 @media screen and (max-width: 768px) {
   .cont-body {
     display: block;
   }
+}
+.fstrow {
+  padding-left: 0px;
 }
 .fstrow,
 .scndrow,
@@ -58,7 +63,9 @@ legend {
   justify-content: flex-start;
   padding: 0px;
 }
-
+.table {
+  margin-top: 49px;
+}
 .form-group .border {
   border-radius: 10px;
 }

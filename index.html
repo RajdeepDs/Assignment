@@ -14,17 +14,15 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="container">
-        <div class="PageName">
-          <i class="bi bi-filetype-xls"></i> Create ChargeMix
-        </div>
-        <i class="bi bi-x"></i>
+      <div class="PageName">
+        <i class="bi bi-filetype-xls"></i> Create ChargeMix
       </div>
+      <i class="bi bi-x"></i>
     </div>
-    <form action="" method="post">
-      <div class="container cont-body">
-        <div class="container col-divide">
-          <div class="container fstrow pt-5">
+    <form action="">
+      <div class="grid cont-body">
+        <div class="col-fst">
+          <div class="fstrow">
             <fieldset class="form-group border p-1 me-3">
               <legend class="w-auto px-2">Metal Grade</legend>
               <div class="form-group">
@@ -46,7 +44,7 @@
               </div>
             </fieldset>
           </div>
-          <div class="container scndrow pt-3">
+          <div class="scndrow pt-3">
             <fieldset class="form-group border p-1 me-3">
               <legend class="w-auto px-2">Heats per day*</legend>
               <div class="form-group">
@@ -60,10 +58,12 @@
                 role="switch"
                 id="flexSwitchCheck"
               />
-              <label class="form-check-label">Electricity Model</label>
+              <label class="form-check-label" id="ElectricityModel"
+                >Electricity Model</label
+              >
             </div>
           </div>
-          <div class="container trdrow pt-3">
+          <div class="trdrow pt-3">
             <fieldset class="form-group border p-1 me-3">
               <legend class="w-auto px-2">Tapping Temperature (&deg;C)*</legend>
               <div class="form-group">
@@ -78,8 +78,8 @@
             </fieldset>
           </div>
 
-          <div class="container frthrow pt-3">
-            <fieldset class="form-group border p-1">
+          <div class="frthrow pt-3">
+            <fieldset class="form-group border p-1 me-3">
               <button type="button" class="btn btn-light" disabled>
                 Use Element Recovery Rates button
               </button>
@@ -87,79 +87,105 @@
                 Use Raw Material Composition
               </button>
             </fieldset>
-            <p class="pt-3">
-              In Inventory file, please provide compositon of raw materials in
-              %.
-            </p>
-            <fieldset class="form-group border p-1 me-3">
+            <fieldset class="form-group border p-1">
               <legend class="w-auto px-2">Mg in FeSiMg (in %)*</legend>
               <div class="form-group">
                 <input type="text" class="form-control" />
               </div>
             </fieldset>
           </div>
-          <div class="container fthrow pt-3">
-            <p class="pe-3 pt-3">Upload File</p>
-            <input type="file" class="form-control" id="customFile" />
+          <p class="word pt-3">
+            In Inventory file, please provide compositon of raw materials in %.
+          </p>
+          <div class="fthrow pt-3">
+            <p class="uploadedfile pe-3 pt-3">Uploaded file</p>
+            <button type="button" class="btn btn-primary">
+              CRESCE.CSV &nbsp;
+              <i
+                class="bi bi-file-earmark-arrow-up"
+                style="font-size: 18px"
+              ></i>
+            </button>
           </div>
         </div>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">Element</th>
-              <th scope="col">Min</th>
-              <th scope="col">Max</th>
-              <th scope="col">Loss %</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>C</td>
-              <td>3</td>
-              <td>3.3</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Si</td>
-              <td>3.4</td>
-              <td>3.8</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Mn</td>
-              <td>0</td>
-              <td>0.5</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>S</td>
-              <td>0</td>
-              <td>0.012</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>P</td>
-              <td>0</td>
-              <td>0.05</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Mg</td>
-              <td>0.03</td>
-              <td>0.045</td>
-              <td>0</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="col-sec">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Element</th>
+                <th scope="col">Min</th>
+                <th scope="col">Max</th>
+                <th scope="col">Loss %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>C</td>
+                <td>3</td>
+                <td>3.3</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Si</td>
+                <td>3.4</td>
+                <td>3.8</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Mn</td>
+                <td>0</td>
+                <td>0.5</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>S</td>
+                <td>0</td>
+                <td>0.012</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>P</td>
+                <td>0</td>
+                <td>0.05</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Mg</td>
+                <td>0.03</td>
+                <td>0.045</td>
+                <td>0</td>
+              </tr>
+              <tr class="blankrow">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="blankrow">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr class="blankrow">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="Target">Target Chemistry</p>
+        </div>
       </div>
-      <div class="container submit">
+      <div class="submit">
         <button
           type="button"
           class="btn btn-primary"
           data-bs-toggle="modal"
           data-bs-target="#errorModal"
         >
-          Submit
+          CONTINUE ->
         </button>
       </div>
       <div
